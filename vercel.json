@@ -1,8 +1,7 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "https://ai-notes-backend-v0b1.onrender.com/api/$1"
-    }
+    { "source": "/api/(.*)", "destination": "https://ai-notes-backend-v0b1.onrender.com/api/$1" }
   ]
 }
