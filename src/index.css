@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+@theme {
+  --color-note-yellow: #fef3c7;
+  --color-note-blue: #dbeafe;
+  --color-note-green: #d1fae5;
+  --color-note-pink: #fce7f3;
+  --color-note-gray: #f3f4f6;
+}
