@@ -1,19 +1,18 @@
 // client.js-->frontend
+
 import axios from "axios";
 
-const base = import.meta.env.VITE_API_BASE || "http://localhost:5000";
+const API_BASE = import.meta.env.DEV ? "http://localhost:5000/api" : "/api";
 
 const api = axios.create({
-  baseURL: `${base}/api`,
+  baseURL: API_BASE,
   headers: { "Content-Type": "application/json" },
   withCredentials: true,
 });
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
+  if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
 
